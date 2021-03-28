@@ -4,6 +4,7 @@
 const event = require('./events.js');
 
 const storeName = 'tana'
+var date = new Date();
 
 
 setInterval(() => {
@@ -11,9 +12,12 @@ setInterval(() => {
 }, 5000)
 
 function delivered(payload){
-  console.log(`VENDOR: thank you for the service ${payload.orderId}`);
-  console.log(`EVENT {event: delivered, {${payload.storeName}, ${payload.orderId},${payload.customerName},${payload.address},}`)
+
+  console.log(`VENDOR: thank you for delivering ${payload.orderId}`);
+  console.log(`EVENT {event: delivered, ${date} {${payload.storeName}, ${payload.orderId},${payload.customerName},${payload.address},}`)
 }
 
 module.exports = {
   delivered: delivered}
+
+  
