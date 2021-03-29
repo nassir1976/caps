@@ -2,7 +2,10 @@
 
 const Events = require('events');
 
-const eventEmitter = new Events()
+const event = new Events()
 
-module.exports = eventEmitter;
+module.exports = event;
+
+
+
 
