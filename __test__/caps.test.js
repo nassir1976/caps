@@ -3,11 +3,11 @@ const caps = require('../caps.js')
 const driver = require('../driver.js')
 const vendor = require('../vendor.js');
 console.log = jest.fn()
-
+//spy 
 describe('test the driver module', () => {
   it('when we console log there is some out put', () => {
     driver.pickedUp({ storeName: 'tana', orderId: Math.random() * 1000, customerName: 'nassir', adress: '1615 19th ave' })
-    setTimeout(() => { expect(console.log).toHaveBeenCalled() }, 800)
+    setTimeout(() => { expect(console.log).toHaveBeenCalled() }, 500)
   })
 
   it('when we console log there is some out put', () => {
